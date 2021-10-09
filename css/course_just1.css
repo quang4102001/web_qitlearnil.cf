@@ -1,0 +1,106 @@
+.courses {
+    width: 100%;
+}
+
+.course-details {
+    display: flex;
+    ;
+}
+
+
+/* --------------------------------------------------- */
+
+.course-details__properties {
+    flex: 5;
+    border-right: 1px solid;
+}
+
+
+/* ----heading------ */
+
+.properties__heading {
+    display: flex;
+}
+
+.properties__heading>div {
+    flex: 1;
+}
+
+.properties__heading__img img {
+    width: 100%;
+    padding: 16px;
+    border-radius: 50px;
+    filter: brightness(80%);
+}
+
+.properties__heading__img img:hover {
+    filter: brightness(95%);
+}
+
+.properties__heading__name h3 {
+    font-size: 3rem;
+    line-height: 1.6;
+    padding-bottom: 32px;
+}
+
+.properties__heading__name p {
+    font-size: 1.8rem;
+}
+
+
+/* ------body-------- */
+
+.properties__body h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.properties__body i {
+    color: rgb(228, 130, 1);
+    padding-right: 16px;
+}
+
+.properties__body p {
+    padding: 4px 0;
+}
+
+
+/* ------------------------------------------------ */
+
+.course-details__lesson {
+    flex: 3;
+}
+
+.list-lesson h2 {
+    font-size: 3.3rem;
+    line-height: 1.6;
+    padding-bottom: 16px;
+    letter-spacing: 3px;
+}
+
+.list-lesson {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-lesson a {
+    padding: 8px auto;
+    border: 2px solid rgba(0, 0, 255, 0.164);
+    border-radius: 10px;
+    margin: 8px 0;
+    background-color: rgba(204, 204, 204, 0.34);
+}
+
+.list-lesson a:hover {
+    background-color: #ddd;
+}
+
+
+/* -------------------------------------------------- */
+
+.btn-primary {
+    width: 30%;
+    margin: 16px 35%;
+    line-height: 32px;
+    margin-bottom: 32px;
+}

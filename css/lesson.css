@@ -1,0 +1,54 @@
+.lesson {
+    margin-top: 32px;
+    width: 90%;
+}
+
+.lesson__video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lesson__video img {
+    width: 100%;
+    margin: 32px auto;
+    border: 2px solid rgba(0, 68, 255, 0.219);
+    border-radius: 50px;
+    filter: brightness(70%);
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.3);
+}
+
+.lesson__video img:hover {
+    filter: brightness(95%);
+}
+
+.lesson__video i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    opacity: .7;
+}
+
+
+/* --------------lesson__text------------- */
+
+.lesson__text>div {
+    margin-bottom: 32px;
+}
+
+.lesson__text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.lesson__text i {
+    color: rgb(228, 130, 1);
+    padding-right: 16px;
+}
+
+.lesson__text p {
+    padding: 4px 0;
+}

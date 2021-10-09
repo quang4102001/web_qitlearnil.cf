@@ -1,0 +1,35 @@
+@media screen and (max-width:768px) {
+    .lesson {
+        width: 100%;
+    }
+    .lesson__video img {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .pd-left-32 {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width:550px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .app {
+        padding: 0 4px 60px !important;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .courses-item {
+        flex-basis: 180px;
+    }
+    .courses-item__img {
+        height: 180px;
+    }
+}

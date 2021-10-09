@@ -1,0 +1,14 @@
+.blog_chitiet {
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.blog_chitiet img {
+    width: 70%;
+    margin: 16px auto 32px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+}

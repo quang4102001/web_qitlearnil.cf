@@ -1,0 +1,19 @@
+@media screen and (max-width:768px) {
+    .insert {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .heading-text {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .heading-text {
+        font-size: 3rem;
+        line-height: 1.1;
+        margin-top: 16px;
+    }
+}

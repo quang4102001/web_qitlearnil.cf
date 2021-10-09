@@ -1,0 +1,24 @@
+@media screen and (max-width:1440px) {
+    .properties__heading__name h3 {
+        padding-bottom: 8px;
+    }
+}
+
+@media screen and (max-width:1310px) {
+    .properties__heading {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .course-details {
+        flex-direction: column;
+    }
+    .course-details__properties {
+        border-bottom: 1px solid black;
+        border-right: none;
+    }
+    .course-details__lesson {
+        padding-right: 16px;
+    }
+}

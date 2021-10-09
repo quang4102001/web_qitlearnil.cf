@@ -1,0 +1,153 @@
+@media screen and (max-width:1366px) {
+    .slogan h1 {
+        display: none;
+    }
+    .search {
+        flex-basis: 50%;
+    }
+    .app {
+        padding: 0 8px 60px;
+    }
+    .about__text p {
+        font-size: 1.4rem;
+    }
+    .contact {
+        padding: 0 16px;
+    }
+    .contact__form div {
+        flex-direction: column;
+    }
+    .contact__form input {
+        margin-bottom: 4px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .slogan__logo img {
+        width: 80px;
+    }
+    .bar .add,
+    .bar>ul>li {
+        width: 60px;
+        height: 60px;
+    }
+    .app {
+        margin-left: 86px;
+    }
+    .about>div {
+        flex-direction: column;
+    }
+    .about__img {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header>div {
+        flex: 0;
+    }
+    .slogan {
+        display: none;
+    }
+    .nav-mobile {
+        display: block;
+    }
+    .search {
+        flex-basis: 80%;
+        margin-right: 32px;
+    }
+    .avatar {
+        display: none;
+    }
+    .bar {
+        display: none;
+    }
+    .app {
+        margin-left: 0;
+        width: 100%;
+    }
+    footer {
+        position: relative;
+        justify-content: center;
+    }
+    footer .nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .nav-mobile__box {
+        right: 0;
+    }
+    .nav-mobile__background>label {
+        left: 100%;
+    }
+    .search {
+        height: 48px;
+    }
+    .testimonials__input input,
+    .testimonials__input textarea {
+        width: 95%;
+    }
+    .courses,
+    .blog,
+    .testimonials,
+    .about,
+    .contact {
+        padding: 0;
+    }
+    .about__img img {
+        width: 100%;
+    }
+    .contact {
+        margin-bottom: 16px;
+    }
+    .contact>div {
+        flex-direction: column;
+        align-items: normal;
+    }
+    .contact__infor {
+        margin-bottom: 8px;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .search {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .slogan {
+        display: block;
+        margin-right: 32px;
+    }
+    .slogan__logo img {
+        width: 120px;
+    }
+    .search {
+        display: none;
+    }
+    .app {
+        padding: 0 0 60px;
+    }
+    .slider {
+        border-radius: 0px;
+    }
+    .heading-text {
+        font-size: 3.5rem;
+    }
+    .heading-text::after {
+        width: 80%;
+    }
+    .testimonials__input .btn,
+    .contact__form .btn {
+        width: 50%;
+    }
+    .testimonials__show {
+        width: 100%;
+        margin: 0;
+    }
+}
