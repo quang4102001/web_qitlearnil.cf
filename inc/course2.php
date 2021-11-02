@@ -1,3 +1,4 @@
+<a class="back-page-link" href="#" onclick="history.go(-1)">Go Back</a>
 <div class="courses">
                 <div class="course-details">
                     <div class="course-details__properties">

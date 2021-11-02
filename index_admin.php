@@ -1,5 +1,10 @@
 <?php session_start(); ?>
 <?php
+    if($_SESSION["user"]!='admin'){
+        header("Location: ./index.php?go=home");
+      }
+?>
+<?php
     include './db_connnection.php';
 ?>
 <!DOCTYPE html>
@@ -22,7 +27,8 @@
                 if(isset($_GET['go'])){
                     include "./url_css.php";
                 }else{
-                    echo"<link rel='stylesheet' type='text/css' href='./css/index.css'>";
+                    echo"<link rel='stylesheet' type='text/css' href='./css/index.css'>
+                    <link rel='stylesheet' type='text/css' href='./css/responsive/rps_index.css'>";
                 }
             ?>        
     <title>QIT</title>
@@ -73,17 +79,7 @@
         </div>
         <div class="user">
             <?php
-                if(isset($_SESSION["user"])){
-                    if($_SESSION["user"]=='user'){
-                    include "./inc/avatar_user.php";
-                }else{
-                    if($_SESSION["user"]=='admin'){
                     include "./inc/avatar_admin.php";
-                    }
-                }
-                }else{
-                  include "./inc/user_login.php";
-                }
             ?>
         </div>
     </header>
@@ -107,7 +103,7 @@
         <div class="app">
             <?php
                 if(isset($_GET['go'])){
-                    include "./url.php";
+                    include "./url_admin.php";
                 }else{
                     include "./inc/home.php";
                 }

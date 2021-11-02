@@ -28,8 +28,7 @@
 
 .properties__heading__img img {
     width: 100%;
-    padding: 16px;
-    border-radius: 50px;
+    border-radius: 5px;
     filter: brightness(80%);
 }
 

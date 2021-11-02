@@ -1,5 +1,4 @@
 .lesson {
-    margin-top: 32px;
     width: 90%;
 }
 
@@ -10,11 +9,11 @@
     align-items: center;
 }
 
-.lesson__video img {
+.lesson__video iframe {
     width: 100%;
-    margin: 32px auto;
-    border: 2px solid rgba(0, 68, 255, 0.219);
-    border-radius: 50px;
+    min-height: 700px;
+    margin: 16px auto;
+    border-radius: 5px;
     filter: brightness(70%);
     box-shadow: 0 0 25px rgba(0, 0, 255, 0.3);
 }

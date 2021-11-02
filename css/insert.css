@@ -19,8 +19,8 @@ form label {
 
 .insert input,
 .insert textarea {
-    border-radius: 20px;
-    border: 2px solid #ccc;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     line-height: 32px;
     outline: none;
     font-size: 1.6rem;

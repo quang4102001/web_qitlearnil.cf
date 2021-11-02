@@ -25,6 +25,18 @@
                         $name=$_POST['insert_name'];
                         $img=$_POST['insert_img'];
                         $price=$_POST['insert_price'];
+                        $id= str_replace  ("'", "\'", $id);
+                        $id= str_replace  ('"', '\"', $id);
+                        $id= str_replace  (';', '\;', $id);
+                        $name= str_replace  ("'", "\'", $name);
+                        $name= str_replace  ('"', '\"', $name);
+                        $name= str_replace  (';', '\;', $name);
+                        $img= str_replace  ("'", "\'", $img);
+                        $img= str_replace  ('"', '\"', $img);
+                        $img= str_replace  (';', '\;', $img);
+                        $price= str_replace  ("'", "\'", $price);
+                        $price= str_replace  ('"', '\"', $price);
+                        $price= str_replace  (';', '\;', $price);
                         $sql=" INSERT INTO courses(id, course_id, course_name, course_img, course_price) VALUES ('0','$id','$name','$img','$price')";
                         if(mysqli_query($conn,$sql)){
                             echo"<h3 class='text-center' style='color:red;'>New record created successfully !</h3>";
@@ -37,6 +49,18 @@
                         $name=$_POST['insert_name'];
                         $img=$_POST['insert_img'];
                         $price=$_POST['insert_price'];
+                        $id= str_replace  ("'", "\'", $id);
+                        $id= str_replace  ('"', '\"', $id);
+                        $id= str_replace  (';', '\;', $id);
+                        $name= str_replace  ("'", "\'", $name);
+                        $name= str_replace  ('"', '\"', $name);
+                        $name= str_replace  (';', '\;', $name);
+                        $img= str_replace  ("'", "\'", $img);
+                        $img= str_replace  ('"', '\"', $img);
+                        $img= str_replace  (';', '\;', $img);
+                        $price= str_replace  ("'", "\'", $price);
+                        $price= str_replace  ('"', '\"', $price);
+                        $price= str_replace  (';', '\;', $price);
                         $sql=" UPDATE `courses` SET course_name='$name',course_img='$img',course_price='$price' WHERE course_id='$id'";
                         if(mysqli_query($conn,$sql)){
                             echo"<h3 class='text-center' style='color:red;'>Record update successfully !</h3>";
@@ -62,9 +86,12 @@
                     </div>
                     <?php
                     $conn=openCon();
-                    $id="";
                     if(isset($_POST['delete'])){
+                        $id="";
                         $id=$_POST['insert_id'];
+                        $id= str_replace  ("'", "\'", $id);
+                        $id= str_replace  ('"', '\"', $id);
+                        $id= str_replace  (';', '\;', $id);
                         $sqli="DELETE FROM sourseschitiet WHERE course_id='$id'";
                         $sql="DELETE FROM courses WHERE course_id='$id'";
                         if(mysqli_query($conn,$sqli)){

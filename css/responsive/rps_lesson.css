@@ -1,3 +1,15 @@
+@media screen and (max-width:1366px) {
+    .lesson__video iframe {
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .lesson__video iframe {
+        min-height: 380px;
+    }
+}
+
 @media screen and (max-width:768px) {
     .lesson {
         width: 100%;
@@ -11,17 +23,26 @@
     .pd-left-32 {
         padding-left: 0;
     }
+    .lesson__video iframe {
+        min-height: 300px;
+    }
 }
 
 @media screen and (max-width:550px) {
     html {
         font-size: 8px;
     }
+    .lesson__video iframe {
+        min-height: 250px;
+    }
 }
 
 @media screen and (max-width:425px) {
     .app {
         padding: 0 4px 60px !important;
+    }
+    .lesson__video iframe {
+        min-height: 200px;
     }
 }
 

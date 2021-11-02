@@ -1,3 +1,4 @@
+<a class="back-page-link" href="#" onclick="history.go(-1)">Go Back</a>
 <div class="lesson">
                 <div class="lesson__video">
                     <?php
@@ -9,8 +10,7 @@
                         }else{
                             while($row=mysqli_fetch_array($query)){
                                echo"
-                    <img class='cursor-pointer' src='".$row['lesson_img']."' alt='".$row['lesson_name']."'>
-                    <i class='far fa-play-circle cursor-pointer'></i>
+                    <iframe src='https://www.youtube.com/embed/3176Sw8A0EE' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
                 </div>
                 <div class='lesson__heading-text'>
                     <p class='heading-text'>".$row['lesson_name']."</p>

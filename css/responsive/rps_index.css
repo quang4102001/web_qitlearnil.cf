@@ -59,12 +59,12 @@
     .slider {
         height: 180px;
     }
-    #radio_3:checked~.first {
+    /* #radio_3:checked~.first {
         margin-left: -40.8%;
     }
     #radio_4:checked~.first {
         margin-left: -61.3%;
-    }
+    } */
     .courses__list {
         align-items: center;
     }

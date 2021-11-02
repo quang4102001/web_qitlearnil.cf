@@ -5,7 +5,7 @@
     height: 400px;
     margin: 16px auto;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 5px;
     position: relative;
 }
 
@@ -15,15 +15,19 @@ input[name="r"] {
 }
 
 .slider__content {
-    width: 500%;
+    /* width: 500%; */
     height: 100%;
+    word-spacing: 0;
 }
 
 .slider__img {
-    display: inline-block;
-    width: 20%;
+    display: none;
+    /* display: inline-block; */
+    /* width: 20%; */
+    animation: anm-growIn2 0.3s linear;
     height: 100%;
     overflow: hidden;
+    word-spacing: 0px;
 }
 
 .slider__img img {
@@ -48,7 +52,7 @@ input[name="r"] {
 .fake--nav {
     flex-basis: 20%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .fake--nav {
@@ -81,20 +85,37 @@ input[name="r"] {
     background-color: rgba(0, 0, 0, .3);
 }
 
-#radio_1:checked~.first {
+
+/* #radio_1:checked~.first {
     margin-left: 0%;
 }
 
 #radio_2:checked~.first {
-    margin-left: -20.3%;
+    margin-left: calc(-20% - 4px);
 }
 
 #radio_3:checked~.first {
-    margin-left: -40.4%;
+    margin-left: calc(-40% - 8px);
 }
 
 #radio_4:checked~.first {
-    margin-left: -60.7%;
+    margin-left: calc(-60% - 12px);
+} */
+
+#radio_1:checked~.slider__img__1 {
+    display: block;
+}
+
+#radio_2:checked~.slider__img__2 {
+    display: block;
+}
+
+#radio_3:checked~.slider__img__3 {
+    display: block;
+}
+
+#radio_4:checked~.slider__img__4 {
+    display: block;
 }
 
 
@@ -135,17 +156,28 @@ input[name="r"] {
     display: flex;
     align-items: flex-start;
     flex-basis: 320px;
+    margin: 0 3px 16px 3px;
+    position: relative;
+    top: 0;
+    transition: all 0.3s linear;
+}
+
+.courses-item:hover {
+    top: -4px;
+}
+
+.courses-item>a {
+    box-shadow: 0 1px 3px 3px rgba(88, 88, 255, 0.308);
+    border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 16px;
 }
 
 .courses-item__img {
     position: relative;
     width: 320px;
-    border-radius: 20px;
-    border: 3px solid rgba(0, 0, 255, 0.164);
     height: 180px;
     overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .courses-item__img img {
@@ -156,7 +188,7 @@ input[name="r"] {
 
 .courses-item a:hover .courses-item__img img {
     transform: scale(1.1);
-    filter: brightness(70%);
+    filter: brightness(90%);
 }
 
 .courses-item h3 {

@@ -26,6 +26,9 @@
     .slogan__logo img {
         width: 80px;
     }
+    .user .btn--login {
+        padding: 4px 8px;
+    }
     .bar .add,
     .bar>ul>li {
         width: 60px;
@@ -47,19 +50,22 @@
     header>div {
         flex: 0;
     }
+    .user {
+        margin-right: 16px;
+    }
     .slogan {
         display: none;
     }
     .nav-mobile {
         display: block;
     }
-    .search {
+    /* .search {
         flex-basis: 80%;
         margin-right: 32px;
-    }
-    .avatar {
+    } */
+    /* .user {
         display: none;
-    }
+    } */
     .bar {
         display: none;
     }
@@ -73,6 +79,9 @@
     }
     footer .nav {
         display: none;
+    }
+    .back-page-link {
+        padding-left: 0;
     }
 }
 
@@ -117,18 +126,36 @@
     .search {
         margin-right: 0;
     }
+    .avatar__item p {
+        display: none;
+    }
+    .manage__list {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+    }
 }
 
 @media screen and (max-width:425px) {
     .slogan {
         display: block;
-        margin-right: 32px;
+    }
+    .slogan__logo.mg-left-32 {
+        margin-left: 0;
     }
     .slogan__logo img {
         width: 120px;
     }
     .search {
         display: none;
+    }
+    .login__box,
+    .register__box {
+        width: 100%;
     }
     .app {
         padding: 0 0 60px;

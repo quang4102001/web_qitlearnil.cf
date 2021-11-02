@@ -1,6 +1,14 @@
+<?php session_start(); ?>
+<?php 
+    if(isset($_SESSION["user"])){
+        if($_SESSION["user"]=='admin'){
+            header('Location: ./index_admin.php?go=home');
+        }
+    }
+?>
 <?php
     include './db_connnection.php';
-?>
+?>  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="./img/logo1.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/js" href="./js/index.js">
     <link rel="stylesheet" type="text/css" href="./css/chung.css">
     <link rel="stylesheet" type="text/css" href="./css/responsive/responsive.css">
@@ -21,7 +30,8 @@
                 if(isset($_GET['go'])){
                     include "./url_css.php";
                 }else{
-                    echo"<link rel='stylesheet' type='text/css' href='./css/index.css'>";
+                    echo"<link rel='stylesheet' type='text/css' href='./css/index.css'>
+                    <link rel='stylesheet' type='text/css' href='./css/responsive/rps_index.css'>";
                 }
             ?>        
     <title>QIT</title>
@@ -31,11 +41,15 @@
     <header>
         <div class="nav-mobile">
             <input type="checkbox" name="nav-mobile__check" id="nav-mobile__check" style="display: none;">
-            <label for="nav-mobile__check" class="color-white cursor-pointer"><i class="fas fa-bars"></i></label>
+            <label for="nav-mobile__check" class="color-white cursor-pointer">
+                <i class="fas fa-bars"></i>
+            </label>
             <div class="nav-mobile__background">
                 <div class="nav-mobile__box">
                     <ul>
-                        <label for="nav-mobile__check" class="cursor-pointer"><i class="fas fa-times"></i></label>
+                        <label for="nav-mobile__check" class="cursor-pointer">
+                            <i class="fas fa-times"></i>
+                        </label>
                     </ul>
                     <hr>
                     <ul>
@@ -70,36 +84,24 @@
             <label for="search" class="search__icon cursor-pointer"><i class="fas fa-search"></i></label>
             <input type="text" class="search__input" name="search" id="search" placeholder="Search courses, blog, ...">
         </div>
-        <div class="avatar">
-            <input type="checkbox" id="avatar__checkbox" style="display:none">
-            <label for="avatar__checkbox" class=" cursor-pointer float-right">
-                <a class="btn btn--login mg-right-32 "><i class="fas fa-user-cog"></i></a>
-            </label>
-            <ul class="avatar__nav">
-                <li><a class="color-black"><i class="fas fa-database pd-right-16"></i>Data</a>
-                    <ul>
-                        <li><a href="?go=insert_course" class="color-black"><i class="fas fa-book pd-right-16"></i>Course</a></li>
-                        <li><a href="?go=insert_lesson" class="color-black"><i class="fas fa-book-open pd-right-16"></i>Lesson</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="color-black"><i class="fas fa-cogs pd-right-16"></i>Setting</a></li>
-            </ul>
+        <div class="user">
+            <?php
+                if(isset($_SESSION["user"])){
+                    if($_SESSION["user"]=='user'){
+                    include "./inc/avatar_user.php";
+                }else{
+                    if($_SESSION["user"]=='admin'){
+                    include "./inc/avatar_admin.php";
+                    }
+                }
+                }else{
+                  include "./inc/user_login.php";
+                }
+            ?>
         </div>
     </header>
     <main>
         <div class="bar">
-            <div class="add">
-                <div>
-                    <input type="checkbox" id="add__checkbox" style="display:none;">
-                    <label for="add__checkbox" class="add__icon color-white cursor-pointer"><i class="fas fa-plus"></i></label>
-                    <ul>
-                        <li class="add__blog cursor-pointer"><a href="?go=add_blog" class="color-black"><i class="fas fa-pen pd-right-16"></i>Blog Manage</a></li>
-                        <li class="add__blog cursor-pointer"><a href="?go=insert_course" class="color-black"><i class="fas fa-pen pd-right-16"></i>Course Manage</a></li>
-                        <li class="add__blog cursor-pointer"><a href="?go=insert_lesson" class="color-black"><i class="fas fa-pen pd-right-16"></i>Lesson Manage</a></li>
-                        <li class="add__cmt cursor-pointer"><a href="#testimonials" class="color-black"><i class="fas fa-comment-dots pd-right-16"></i>Add comment</a></li>
-                    </ul>
-                </div>
-            </div>
             <ul class="side">
                 <li class="side__home cursor-pointer"><a href="?go=home" class="color-black"><i class="fas fa-home"></i>
                         <p>Home</p>

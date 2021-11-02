@@ -18,7 +18,7 @@
                         <input type="text" name="insert_course_id" id="insert_course_id" class="form-control" placeholder="Course ID" required>
                     </div>
                     <div class="insert_stt">
-                        <label for="insert_stt">Lesson Name:</label>
+                        <label for="insert_stt">Lesson STT:</label>
                         <input type="text" name="insert_stt" id="insert_stt" class="form-control" placeholder="STT" required>
                     </div>
                     <?php
@@ -30,6 +30,16 @@
                         $img=$_POST['insert_img'];
                         $course_id=$_POST['insert_course_id'];
                         $stt=$_POST['insert_stt'];
+                        $id= str_replace  ("'", "\'", $id);
+                        $id= str_replace  ('"', '\"', $id);
+                        $name= str_replace  ("'", "\'", $name);
+                        $name= str_replace  ('"', '\"', $name);
+                        $img= str_replace  ("'", "\'", $img);
+                        $img= str_replace  ('"', '\"', $img);
+                        $img= str_replace  ("'", "\'", $img);
+                        $img= str_replace  ('"', '\"', $img);
+                        $stt= str_replace  ("'", "\'", $stt);
+                        $stt= str_replace  ('"', '\"', $stt);
                         $sql="INSERT INTO lesson (lesson_id, lesson_name, lesson_img) VALUES ('$id','$name','$img')";
                         $sqli="INSERT INTO sourseschitiet(course_id, stt, lesson_id) VALUES ('$course_id','$stt','$id')";
                         if(mysqli_query($conn,$sql)){
@@ -47,6 +57,21 @@
                         $img=$_POST['insert_img'];
                         $course_id=$_POST['insert_course_id'];
                         $stt=$_POST['insert_stt'];
+                        $id= str_replace  ("'", "\'", $id);
+                        $id= str_replace  ('"', '\"', $id);
+                        $id= str_replace  (';', '\;', $id);
+                        $name= str_replace  ("'", "\'", $name);
+                        $name= str_replace  ('"', '\"', $name);
+                        $name= str_replace  (';', '\;', $name);
+                        $img= str_replace  ("'", "\'", $img);
+                        $img= str_replace  ('"', '\"', $img);
+                        $img= str_replace  (';', '\;', $img);
+                        $course_id= str_replace  ("'", "\'", $course_id);
+                        $course_id= str_replace  ('"', '\"', $course_id);
+                        $course_id= str_replace  (';', '\;', $course_id);
+                        $stt= str_replace  ("'", "\'", $stt);
+                        $stt= str_replace  ('"', '\"', $stt);
+                        $stt= str_replace  (';', '\;', $stt);
                         $sql="UPDATE lesson SET lesson_name='$name',lesson_img='$img' WHERE lesson_id='$id'";
                         $sqli="UPDATE sourseschitiet SET course_id='$course_id',stt='$stt' WHERE lesson_id='$id'";
                         if(mysqli_query($conn,$sql)){
@@ -75,8 +100,11 @@
                     </div>
                     <?php
                     $conn=openCon();
-                    $id="";
                     if(isset($_POST['delete'])){
+                        $id="";
+                        $id= str_replace  ("'", "\'", $id);
+                        $id= str_replace  ('"', '\"', $id);
+                        $id= str_replace  (';', '\;', $id);
                         $id=$_POST['insert_id'];
                         $sqli="DELETE FROM sourseschitiet WHERE lesson_id='$id'";
                         $sql="DELETE FROM lesson WHERE lesson_id='$id'";

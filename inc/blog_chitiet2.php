@@ -1,3 +1,4 @@
+<a class="back-page-link" href="#" onclick="history.go(-1)">Go Back</a>
 <div class="blog_chitiet">
                 <?php
                 $conn=OpenCon();
@@ -17,7 +18,7 @@
                 }
                 CloseCon($conn);
                 ?>
-            </div>     
+</div>     
             <div class="blog courses">
                 <div class="blog__heading-text courses__heading-text">
                     <h2>Blog</h2>

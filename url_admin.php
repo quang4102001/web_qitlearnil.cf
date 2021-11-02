@@ -21,12 +21,12 @@ if($str=="lesson"){
     include "./inc/lesson2.php";
 }
 if($str=="insert_course"){
-    echo"<p>Định làm cái gì đấy</p>";
+    include "./inc/insert_course2.php";
 }
 if($str=="insert_lesson"){
-    echo"<p>Định phá à</p>";
+    include "./inc/insert_lesson2.php";
 }   
 if($str=="add_blog"){
-    echo"<p>Không có đâu :))</p>";
+    include "./inc/add_blog2.php";
 }
 ?>

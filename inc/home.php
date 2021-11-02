@@ -4,16 +4,16 @@
                     <input type="radio" name="r" id="radio_2">
                     <input type="radio" name="r" id="radio_3">
                     <input type="radio" name="r" id="radio_4">
-                    <div class="slider__img first">
+                    <div class="slider__img slider__img__1 first">
                         <img src="./img/slider1.jpg" alt="slider 1">
                     </div>
-                    <div class="slider__img">
+                    <div class="slider__img slider__img__2">
                         <img src="./img/slider5.jpg" alt="slider 2">
                     </div>
-                    <div class="slider__img">
+                    <div class="slider__img slider__img__3">
                         <img src="./img/slider3.jpg" alt="slider 3">
                     </div>
-                    <div class="slider__img">
+                    <div class="slider__img slider__img__4">
                         <img src="./img/slider4.jpg" alt="slider 4">
                     </div>
                     <div class="slider__fake__nav">
