@@ -56,6 +56,13 @@
 }
 
 @media screen and (max-width:550px) {
+    .courses,
+    .blog,
+    .testimonials,
+    .about,
+    .contact {
+        padding: 0 4px;
+    }
     .slider {
         height: 180px;
     }
